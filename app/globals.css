@@ -1,26 +1,99 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=DM+Sans:wght@400;500&display=swap");
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* ---- Custome Theme ---- */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* ---- color palette ---- */
+  --color-pink: #F297A0;
+  --color-pink-light: #F9D0CE;
+  --color-pink-pale: #FDE8E6;
+
+  --color-cream: #F3EBD8;
+  --color-cream-light: #FAF6ED;
+
+  --color-green: #B6BB79;
+  --color-green-dark: #8A8F4E;
+  --color-green-deep: #6B7040;
+
+  --color-brown: #5C4A3A;
+  --color-brown-light: #7D6B5A;
+
+  --color-white-warm: #FFFCF7;
+
+  /* ---- fonts ---- */
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+
+  /* ---- border radius ---- */
+  --radius-card: 14px;
+  --radius-pill: 9999px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ---- Base Style ---- */
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-brown);
+    background-color: var(--color-white-warm);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ---- Sparkle Animations ---- */
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes sparkle-drift {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.4) rotate(0deg);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1) rotate(45deg);
+  }
+  70% {
+    opacity: 0.8;
+    transform: scale(0.9) rotate(90deg);
+  }
+}
+
+.sparkle {
+  animation: sparkle 2.5s ease-in-out infinite;
+}
+
+.sparkle-drift {
+  animation: sparkle-drift 3.5s ease-in-out infinite;
+}
+
+/* ---- Wave Dividers ---- */
+.wave-divider {
+  display: block;
+  width: 100%;
+  line-height: 0;
+  margin-top: -1px; /* prevents 1px gap from rounding */
+}
+
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #F9D0CE;
+  color: #5C4A3A;
 }
