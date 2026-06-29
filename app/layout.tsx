@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+// import Footer from "@/components/Footer";
 
 /* ---- Font Setup ---- */
 const fraunces = Fraunces({
@@ -43,7 +43,7 @@ export default function RootLayout({
             always stays at the bottom even on short pages */}
         <main className="flex-1">{children}</main>
 
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
