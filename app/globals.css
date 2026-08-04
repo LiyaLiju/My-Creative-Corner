@@ -3,16 +3,16 @@
 /* ---- Custome Theme ---- */
 @theme inline {
   /* ---- color palette ---- */
-  --color-pink: #F297A0;
-  --color-pink-light: #F9D0CE;
-  --color-pink-pale: #FDE8E6;
+  --color-pink: #e25e8c;
+  --color-pink-light: #f8c4d1;
+  --color-pink-pale: #fadde5;
 
   --color-cream: #F3EBD8;
   --color-cream-light: #FAF6ED;
 
-  --color-green: #B6BB79;
-  --color-green-dark: #8A8F4E;
-  --color-green-deep: #6B7040;
+  --color-green: #d8e6c8;
+  --color-green-dark: #98b079;
+  --color-green-deep: #6f774b;
 
   --color-brown: #5C4A3A;
   --color-brown-light: #7D6B5A;
@@ -35,43 +35,6 @@
     color: var(--color-brown);
     background-color: var(--color-white-warm);
   }
-}
-
-/* ---- Sparkle Animations ---- */
-@keyframes sparkle {
-  0%,
-  100% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes sparkle-drift {
-  0%,
-  100% {
-    opacity: 0;
-    transform: scale(0.4) rotate(0deg);
-  }
-  30% {
-    opacity: 1;
-    transform: scale(1) rotate(45deg);
-  }
-  70% {
-    opacity: 0.8;
-    transform: scale(0.9) rotate(90deg);
-  }
-}
-
-.sparkle {
-  animation: sparkle 2.5s ease-in-out infinite;
-}
-
-.sparkle-drift {
-  animation: sparkle-drift 3.5s ease-in-out infinite;
 }
 
 /* ---- Wave Dividers ---- */

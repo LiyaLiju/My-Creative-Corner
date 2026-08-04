@@ -1,14 +1,4 @@
-/* ============================================
-   FLOWER ICON
-   The little 5-petal flower motif used across
-   the site
-
-   Props:
-   - size: width/height in pixels (default 20)
-   - petalColor: outer petals (default pink light)
-   - centerColor: center dot (default pink)
-   - className: extra Tailwind classes
-   ============================================ */
+/* FLOWER ICON */
 
 interface FlowerIconProps {
   size?: number;
@@ -19,8 +9,8 @@ interface FlowerIconProps {
 
 export default function FlowerIcon({
   size = 20,
-  petalColor = "#F9D0CE",
-  centerColor = "#F297A0",
+  petalColor = "#ed818f",
+  centerColor = "#fcf3c7",
   className = "",
 }: FlowerIconProps) {
   return (
